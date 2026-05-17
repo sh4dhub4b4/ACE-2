@@ -205,6 +205,27 @@ Alpine:
 ```bash id="h3md7l"
 kubectl exec -it <pod_name> -- sh
 ```
+---
+# Kubernetes Pod Shell Access
+
+```bash
+kubectl exec -it <pod-name> -n <namespace> -- bash
+```
+
+## Description
+
+এই command ব্যবহার করে Kubernetes pod-এর ভিতরে interactive terminal/shell access নেওয়া যায়।
+
+### Variables
+
+* `<pod-name>` → যে pod-এ ঢুকতে চাও
+* `<namespace>` → pod যে namespace-এ আছে
+
+### Example
+
+```bash
+kubectl exec -it sandbox-cse-101-48cd0708 -n eci-sandboxes -- bash
+```
 
 ---
 
